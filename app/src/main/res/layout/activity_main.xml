@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvReverseStringOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/etReverseStringInput" />
+
+    <EditText
+        android:id="@+id/etReverseStringInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Enter Word"
+        />
+    <Button
+        android:id="@+id/btnReverseString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvReverseStringOutput"
+        android:text="Reverse String"
+        android:onClick="onClick"/>
+
+    <TableLayout
+        android:id="@+id/tbNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnReverseString"
+        >
+        <TableRow
+            >
+            <EditText
+                android:id="@+id/etFirstNumberInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@id/btnReverseString"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="Min Number"
+                />
+            <EditText
+                android:id="@+id/etSecondNumberInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@id/btnReverseString"
+                app:layout_constraintStart_toEndOf="@id/etFirstNumberInput"
+                android:hint="Max Number"
+                />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+
+
+    <Button
+        android:id="@+id/btnCalculatePrimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tbNumbers"
+        android:text="Calculate Prime Numbers"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/tvPrimeStringOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculatePrimes" />
+
+    <Button
+        android:id="@+id/btnFibonacci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Fibonacci"
+        app:layout_constraintTop_toBottomOf="@id/tvPrimeStringOutput"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/tvFibonacci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btnFibonacci" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
